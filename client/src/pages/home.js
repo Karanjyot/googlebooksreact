@@ -9,7 +9,7 @@ function Home() {
   const book = () => {
     axios
       .get(
-        `https://www.googleapis.com/books/v1/volumes?q=${books}&key=AIzaSyDtuibBTCsR9IJZ9soabbOuzx5EC1zKHFc`
+        `https://www.googleapis.com/books/v1/volumes?q=${books}&key=${process.env.key}`
       )
       .then((res) => {
         // console.log(res.data.items[0].volumeInfo.title);
@@ -65,5 +65,3 @@ function Home() {
 }
 
 export default Home;
-
-// AIzaSyDtuibBTCsR9IJZ9soabbOuzx5EC1zKHFc
